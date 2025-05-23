@@ -1,0 +1,51 @@
+{% extends "master.html" %} 
+
+{% comment %} title {% endcomment %}
+{% block title %} Products {% endblock %} 
+
+{% comment %} main content {% endcomment %}
+{% block content %}
+
+<h1>Products</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Product ID</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">More Details</th>
+      {% comment %}
+      <th scope="col">₹ Product Price</th>
+      <th scope="col">Product Stock</th>
+      <th scope="col">Made In</th>
+      {% endcomment %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for product in products %}
+    <tr>
+      <th scope="row">{{product.id}}</th>
+      <td>{{product.name}}</td>
+      <td><a href="details/{{product.id}}">More Info</a></td>
+
+      {% comment %}
+      <td>{{product.price}}</td>
+      <td>{{product.stock}}</td>
+      <td>{{product.origin_country}}</td>
+      {% endcomment %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% comment %}
+<ul>
+  {% for product in products %}
+  <li>Product ID: {{product.id}}</li>
+  <li>Product Name: {{product.name}}</li>
+  <li>Product Price: {{product.price}}</li>
+  <li>Product Stock: {{product.stock}}</li>
+  <li>Origin Country: {{product.origin_country}}</li>
+  {% endfor %}
+</ul>
+{% endcomment %} 
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "master.html" %} {% block title %} Home - Welcome {% endblock %} 
+
+{% block content %}
+
+<div class="text-center">
+  <h1 class="display-2">Welcome To E-commerce</h1>
+  <p class="lead">Buy anything from anywhere</p>
+  <a href="{% url "products" %}" class="btn btn-primary">Show Product</a>
+</div>
+
+{% endblock %}

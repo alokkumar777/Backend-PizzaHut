@@ -1,0 +1,16 @@
+{% extends "master.html" %} 
+
+{% block title %} Details {% endblock %} 
+
+{% block content %}
+<h1>Complete Details</h1>
+{% comment %} {% for product in products %} {% endcomment %}
+<ul>
+  <li>{{product.name}}</li>
+  <li>{{product.price}}</li>
+  <li>{{product.stock}}</li>
+  <li>{{product.origin_country}}</li>
+</ul>
+{% comment %} {% endfor %} {% endcomment %} 
+
+{% endblock %}
